@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PredictionFormController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,9 +21,16 @@ Route::post('/logout', [LoginController::class, 'logout'])
     ->name('logout.process');
 
 
-Route::get('/diabetes', function () {
-    return view('page.diabetes');
-})->middleware('auth')->name('diabetes.page');
+// Route::get('/diabetes', function () {
+//     return view('page.diabetes');
+// })->middleware('auth')->name('diabetes.page');
+
+Route::get('/diabetes', [PredictionFormController::class, 'form'])
+    ->middleware('auth')
+    ->name('diabetes.page');
+Route::post('/diabetes/predict', [PredictionFormController::class, 'predict'])
+    ->middleware('auth')
+    ->name('diabetes.predict');
 
 Route::get('/lifestyle', function () {
     return view('page.lifestyle');

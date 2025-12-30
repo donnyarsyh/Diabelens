@@ -1,6 +1,13 @@
 <div class="container-menu-diabetes">
     <div class="container-judul-menu-diabetes">
-        <h1 class="judul-menu-diabetes">Cek Diabetes</h1>
+        @if (Route::currentRouteName() === 'diabetes.page' || Route::currentRouteName() === 'diabetes.predict')
+            <h1 class="judul-menu-diabetes">Cek Diabetes</h1>
+        @elseif (Route::currentRouteName() === 'lifestyle.page' || Route::currentRouteName() === 'lifestyle.store')
+            <h1 class="judul-menu-diabetes">Cek Gaya Hidup</h1>
+        @elseif (Route::currentRouteName() === 'profile.page' || Route::currentRouteName() === 'profile.update')
+            <h1 class="judul-menu-diabetes">Profile</h1>
+        @endif
+
         <p class="deskripsi__menu-diabetes">Lorem ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text</p>
     </div>

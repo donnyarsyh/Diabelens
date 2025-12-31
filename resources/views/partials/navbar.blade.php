@@ -1,5 +1,5 @@
 <header class="header">
-    <div class="header__logo">Diabelens</div>
+    <div class="header__logo">Diabelens.</div>
 
     <nav class="header__navigasi">
         <a href="#home" class="navigasi__item aktif">Home</a>
@@ -11,3 +11,13 @@
         Login / Daftar
     </button>
 </header>
+<script>
+    const items = document.querySelectorAll(".navigasi__item");
+
+    items.forEach(item => {
+        item.addEventListener("click", function() {
+            items.forEach(i => i.classList.remove("aktif"));
+            this.classList.add("aktif");
+        });
+    });
+</script>

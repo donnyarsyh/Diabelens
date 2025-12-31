@@ -6,7 +6,7 @@
                 kesehatan dan mengelola pola hidup berdasarkan data pemeriksaan medis dengan dukungan kecerdasan
                 buatan.</p>
         @elseif (Route::currentRouteName() === 'lifestyle.page' || Route::currentRouteName() === 'lifestyle.store')
-            <h1 class="judul-menu-diabetes">Cek Gaya Hidup</h1>
+            <h1 class="judul-menu-diabetes">Analisis Gaya Hidup</h1>
             <p class="deskripsi__menu-diabetes">Fitur ini membantu pasien diabetes mengevaluasi pola makan,
                 aktivitas fisik, dan kebiasaan harian sebagai bagian dari pengelolaan gaya hidup sehat berdasarkan
                 analisis kecerdasan buatan.</p>

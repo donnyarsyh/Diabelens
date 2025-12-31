@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="hasil-ai-diabetes__gambar">
-                    <img src="{{ asset('images/doctor-ai.png') }}" alt="Dokter Pasien">
+                    <img src="{{ asset('images/good.jpg') }}" alt="Dokter Pasien">
                 </div>
             @endisset
 

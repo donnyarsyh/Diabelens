@@ -17,19 +17,23 @@
 
     </div>
     <div class="page-menu">
-        <div class="menu-item active" onclick="window.location='{{ route('diabetes.page') }}'">
+        <div class="menu-item {{ request()->routeIs('diabetes.page', 'diabetes.predict') ? 'active' : '' }}"
+            onclick="window.location='{{ route('diabetes.page') }}'">
             <img src="{{ asset('images/icon-diabetes.png') }}" alt="diabetes">
             <span>Diabetes</span>
         </div>
 
-        <div class="menu-item" onclick="window.location='{{ route('lifestyle.page') }}'">
+        <div class="menu-item {{ request()->routeIs('lifestyle.page', 'lifestyle.store') ? 'active' : '' }}"
+            onclick="window.location='{{ route('lifestyle.page') }}'">
             <img src="{{ asset('images/icon-lifestyle.png') }}" alt="lifestyle">
             <span>Lifestyle</span>
         </div>
 
-        <div class="menu-item" onclick="window.location='{{ route('profile.page') }}'">
+        <div class="menu-item {{ request()->routeIs('profile.page', 'profile.update') ? 'active' : '' }}"
+            onclick="window.location='{{ route('profile.page') }}'">
             <img src="{{ $user->avatar ?? asset('images/user.png') }}" alt="Foto Profile">
             <span>Profil</span>
         </div>
     </div>
+
 </div>

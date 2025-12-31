@@ -63,12 +63,12 @@ class LifestyleController extends Controller
 
         // KEPUTUSAN
         if ($score >= 3) {
-            $hasil = 'Bagus';
-            $deskripsi = 'Pola hidup Anda sudah tergolong sehat. Pertahankan kebiasaan makan bergizi, rutin berolahraga, dan tetap aktif agar risiko penyakit metabolik seperti diabetes dapat ditekan.';
+            $hasil = 'Pola Hidup Sudah Baik';
+            $deskripsi = 'Pola makan, aktivitas fisik, dan kebiasaan harian yang dipilih menunjukkan kecenderungan gaya hidup yang cukup baik.Pertahankan kebiasaan positif untuk mendukung kesehatan jangka panjang';
             $gambar = 'good.jpg';
         } else {
-            $hasil = 'Kurang Bagus';
-            $deskripsi = 'Pola hidup Anda masih perlu diperbaiki. Disarankan untuk meningkatkan konsumsi makanan sehat, mengurangi makanan manis dan cepat saji, serta melakukan aktivitas fisik secara rutin.';
+            $hasil = 'Pola Hidup Perlu Diperbaiki';
+            $deskripsi = 'Sistem mendeteksi kebiasaan yang berpotensi berdampak kurang baik terhadap kesehatan. Disarankan untuk meningkatkan aktivitas fisik dan memperbaiki pola makan secara bertahap.';
             $gambar = 'bad.jpg';
         }
 

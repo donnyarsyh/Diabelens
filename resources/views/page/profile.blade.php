@@ -11,16 +11,17 @@
                 enctype="multipart/form-data">
                 @csrf
 
-                <h2 class="form__judul-profile">Informasi Profile</h2>
-                <p class="form__deskripsi-profile">Isi form sesuai dengan hasil terakhir pengecekan dari dokter.</p>
+                <h2 class="form__judul-profile">Informasi Profil Pengguna</h2>
+                <p class="form__deskripsi-profile">Lengkapi dan perbarui data diri Anda untuk mendukung
+                    personalisasi layanan dan kemudahan pengelolaan informasi pada sistem Diabelens. </p>
 
-                <input type="text" name="nama" placeholder="Nama Lengkap" value="{{ old('nama', $user->name) }}"
+                <input type="text" name="nama" placeholder="Nama Lengkap Pengguna"
+                    value="{{ old('nama', $user->name) }}" required class="form__input-profile">
+
+                <input type="email" name="email" placeholder="Email Pengguna" value="{{ old('email', $user->email) }}"
                     required class="form__input-profile">
 
-                <input type="email" name="email" placeholder="Email" value="{{ old('email', $user->email) }}" required
-                    class="form__input-profile">
-
-                <input type="tel" name="telp" placeholder="Nomor Telepon"
+                <input type="tel" name="telp" placeholder="Nomor Telepon Aktif"
                     value="{{ old('telp', $user->telp ?? '') }}" required class="form__input-profile">
 
                 <select name="gender" class="form__select-profile" required>
@@ -34,14 +35,14 @@
                 </select>
 
                 <div class="form-group">
-                    <label for="avatar">Avatar</label>
+                    <label for="avatar">Foto Profil</label>
                     <input type="file" name="avatar" id="avatar" accept="image/*" class="form__input-profile">
                 </div>
 
 
                 <div class="form-group-with-icon">
                     <input type="password" name="password" id="password_input"
-                        placeholder="Password (kosongkan jika tidak mengganti)" class="form__input-profile">
+                        placeholder="Password Baru (kosongkan jika tidak ingin mengganti)" class="form__input-profile">
                     <i class="fas fa-eye-slash password-toggle-icon" onclick="togglePasswordVisibility()"></i>
                 </div>
 

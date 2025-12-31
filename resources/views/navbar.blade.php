@@ -1,5 +1,5 @@
 <header class="header">
-    <div class="header__logo">Diabelens</div>
+    <div class="header__logo">Diabelens.</div>
     <nav class="header__navigasi">
         <!-- Perbarui href untuk menunjuk ke ID bagian -->
         <a href="#home" class="navigasi__item aktif">Home</a>

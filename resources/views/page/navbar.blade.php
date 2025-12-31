@@ -1,15 +1,20 @@
 <div class="container-menu-diabetes">
     <div class="container-judul-menu-diabetes">
         @if (Route::currentRouteName() === 'diabetes.page' || Route::currentRouteName() === 'diabetes.predict')
-            <h1 class="judul-menu-diabetes">Cek Diabetes</h1>
+            <h1 class="judul-menu-diabetes">Manajemen Diabetes</h1>
+            <p class="deskripsi__menu-diabetes">Diabelens membantu pasien diabetes memantau kondisi
+                kesehatan dan mengelola pola hidup berdasarkan data pemeriksaan medis dengan dukungan kecerdasan
+                buatan.</p>
         @elseif (Route::currentRouteName() === 'lifestyle.page' || Route::currentRouteName() === 'lifestyle.store')
             <h1 class="judul-menu-diabetes">Cek Gaya Hidup</h1>
+            <p class="deskripsi__menu-diabetes">Fitur ini membantu pasien diabetes mengevaluasi pola makan,
+                aktivitas fisik, dan kebiasaan harian sebagai bagian dari pengelolaan gaya hidup sehat berdasarkan
+                analisis kecerdasan buatan.</p>
         @elseif (Route::currentRouteName() === 'profile.page' || Route::currentRouteName() === 'profile.update')
             <h1 class="judul-menu-diabetes">Profile</h1>
         @endif
 
-        <p class="deskripsi__menu-diabetes">Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text</p>
+
     </div>
     <div class="page-menu">
         <div class="menu-item active" onclick="window.location='{{ route('diabetes.page') }}'">

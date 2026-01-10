@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
     <body>
-        <main class="container-utama-diabetes">
+        <main class="container-utama-diabetes"> 
             <div class="container-menu-diabetes">
                 <div class="container-judul-menu-diabetes">
                     <h1 class="judul-menu-diabetes">Cek Diabetes</h1>

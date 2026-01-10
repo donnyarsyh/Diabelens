@@ -10,7 +10,7 @@ Route::get('/', function () {
     return view('landingPage');
 })->name('landing');
 Route::get('/login', function () {
-    return redirect('/'); // arahkan ke halaman home (karena login pakai modal)
+    return redirect('/'); // arahkan ke halaman home (karena login pakai model)
 })->name('login');
 
 

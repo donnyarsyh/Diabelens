@@ -570,7 +570,7 @@ a {
 ====================== MENU DIABETES ======================
 -------------------------------------------------------- */
 .container-utama-diabetes {
-    padding: 40px;
+    padding: 20px;
     background-color: transparent;
 }
 
@@ -579,10 +579,10 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-
+ 
 .container-judul-menu-diabetes {
     max-width: 900px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     padding: 0 10px;
 }
 
@@ -726,7 +726,7 @@ a {
 ==================== MENU LIFESTYLE ====================
 ----------------------------------------------------- */
 .container-utama-lifestyle {
-    padding: 40px;
+    padding: 20px;
     background-color: transparent;
 }
 
@@ -873,7 +873,7 @@ a {
 ======================== PROFILE ========================
 ------------------------------------------------------- */
 .container-utama-profile {
-    padding: 40px;
+    padding: 20px;
     background-color: transparent;
 }
 
@@ -1157,5 +1157,143 @@ a {
     .kaki-halaman__wadah {
         flex-direction: column;
         gap: 30px;
+    }
+}
+/* =========================================
+   FIX HERO LANDING PAGE MOBILE (TERPOTONG)
+========================================= */
+@media (max-width: 768px) {
+
+    /* HERO SECTION */
+    .bagian-hero {
+        height: auto;              /* HILANGKAN 100vh */
+        min-height: unset;
+        overflow: visible;         /* BIARKAN SCROLL */
+        flex-direction: column;    /* STACK VERTICAL */
+        padding: 120px 20px 40px;  /* AMAN DARI NAVBAR */
+        text-align: center;
+    }
+
+    /* KONTEN HERO */
+    .hero__konten {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero__judul {
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
+
+    .hero__deskripsi {
+        font-size: 0.95rem;
+    }
+
+    /* GAMBAR HERO */
+    .hero__gambar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero__gambar img {
+        max-width: 85%;
+        height: auto;
+        max-height: 320px; /* CEGAH GAMBAR MAKAN LAYAR */
+        object-fit: contain;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE MENU MOBILE (DIABETES, LIFESTYLE, PROFILE)
+========================================= */
+@media (max-width: 768px) {
+
+    /* ====== MENU ATAS ====== */
+    .container-menu-diabetes,
+    .container-menu-lifestyle,
+    .container-menu-profile {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    /* ====== MENU ICON ====== */
+    .page-menu {
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 12px;
+        width: 33%;
+    }
+
+    .menu-item span {
+        display: none; /* HILANGKAN TEKS MENU */
+    }
+
+    .menu-item img {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* ====== JUDUL & DESKRIPSI ====== */
+    .container-judul-menu-diabetes,
+    .container-judul-menu-lifestyle,
+    .container-judul-menu-profile {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* ====== FORM & HASIL AI STACK ====== */
+    .container-form-diabetes,
+    .container-form-lifestyle,
+    .container-form-profile {
+        flex-direction: column;
+    }
+
+    .kolom-input-form-diabetes,
+    .kolom-hasil-ai-diabetes,
+    .kolom-input-form-lifestyle,
+    .kolom-hasil-ai-lifestyle,
+    .kolom-input-form-profile,
+    .kolom-foto-profile {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* ====== KURANGI PADDING CARD ====== */
+    .card-diabetes,
+    .card-ai-diabetes,
+    .card-lifestyle,
+    .card-ai-lifestyle,
+    .card-profile,
+    .card-foto-profile {
+        padding: 25px;
+    }
+
+    /* ====== FOTO PROFILE ====== */
+    .foto-profile {
+        width: 100%;
+        height: auto;
+    }
+
+    .foto-profile img {
+        height: auto;
+        max-height: 300px;
+    }
+
+    /* ====== TOMBOL ====== */
+    .btn-simpan,
+    .hasil-ai-diabetes__tombol-generate,
+    .hasil-ai-lifestyle__tombol-generate {
+        width: 100%;
     }
 }

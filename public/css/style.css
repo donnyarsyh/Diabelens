@@ -579,7 +579,7 @@ a {
     justify-content: space-between;
     align-items: center;
 }
- 
+
 .container-judul-menu-diabetes {
     max-width: 900px;
     margin-bottom: 10px;
@@ -1163,14 +1163,13 @@ a {
    FIX HERO LANDING PAGE MOBILE (TERPOTONG)
 ========================================= */
 @media (max-width: 768px) {
-
     /* HERO SECTION */
     .bagian-hero {
-        height: auto;              /* HILANGKAN 100vh */
+        height: auto; /* HILANGKAN 100vh */
         min-height: unset;
-        overflow: visible;         /* BIARKAN SCROLL */
-        flex-direction: column;    /* STACK VERTICAL */
-        padding: 120px 20px 40px;  /* AMAN DARI NAVBAR */
+        overflow: visible; /* BIARKAN SCROLL */
+        flex-direction: column; /* STACK VERTICAL */
+        padding: 120px 20px 40px; /* AMAN DARI NAVBAR */
         text-align: center;
     }
 
@@ -1204,12 +1203,10 @@ a {
     }
 }
 
-
 /* =========================================
    RESPONSIVE MENU MOBILE (DIABETES, LIFESTYLE, PROFILE)
 ========================================= */
 @media (max-width: 768px) {
-
     /* ====== MENU ATAS ====== */
     .container-menu-diabetes,
     .container-menu-lifestyle,

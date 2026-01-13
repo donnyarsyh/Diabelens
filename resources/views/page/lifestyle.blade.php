@@ -51,19 +51,52 @@
             </form>
         </div>
         <div class="kolom-hasil-ai-lifestyle card-ai-lifestyle">
-            <div class="hasil-ai-lifestyle__konten_good">
-                <h2 class="hasil-ai-lifestyle__judul_good"> {{ $hasil ?? 'Silakan isi form' }}</h2>
-                <p class="hasil-ai-lifestyle__deskripsi"> {{ $deskripsi ?? '' }}</p>
-            </div>
+
             @if (isset($score))
+                @if ($score >= 3)
+                    {{-- HASIL BAGUS --}}
+                    <div class="hasil-ai-lifestyle__konten_good">
+                        <h2 class="hasil-ai-lifestyle__judul_good">
+                            {{ $hasil ?? 'Silakan isi form' }}
+                        </h2>
+                        <p class="hasil-ai-lifestyle__deskripsi">
+                            {{ $deskripsi ?? '' }}
+                        </p>
+                    </div>
+                    <div class="hasil-ai-lifestyle__gambar">
+                        <img src="{{ asset('images/good.jpg') }}" alt="Karakter Dokter AI">
+                    </div>
+                @else
+                    {{-- HASIL KURANG BAGUS --}}
+                    <div class="hasil-ai-lifestyle__konten_bad">
+                        <h2 class="hasil-ai-lifestyle__judul_bad">
+                            {{ $hasil ?? 'Silakan isi form' }}
+                        </h2>
+                        <p class="hasil-ai-lifestyle__deskripsi">
+                            {{ $deskripsi ?? '' }}
+                        </p>
+                    </div>
+                    <div class="hasil-ai-lifestyle__gambar">
+                        <img src="{{ asset('images/bad.jpg') }}" alt="Karakter Dokter AI">
+                    </div>
+                @endif
+
                 <small>Skor Gaya Hidup: {{ $score }}</small>
+            @else
+                {{-- BELUM ADA ANALISIS --}}
+                <div class="hasil-ai-lifestyle__konten_neutral">
+                    <h2>Silakan isi form</h2>
+                    <p>Hasil analisis gaya hidup akan muncul di sini.</p>
+                </div>
             @endif
-            <div class="hasil-ai-lifestyle__gambar">
-                <img src="{{ asset('images/good.jpg') }}" alt="Karakter Dokter AI">
-            </div>
+
+
+
             <button type="submit" form="form-prediksi" class="hasil-ai-lifestyle__tombol-generate btn-primary">
                 Analisis Gaya Hidup
             </button>
+
         </div>
+
     </div>
 @endsection
